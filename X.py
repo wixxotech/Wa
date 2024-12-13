@@ -110,7 +110,7 @@ def run_api_files_with_loop(phone_number):
         processes = []
 
         # Dynamically load and run API files 1.py to 100.py
-        for i in range(1, 101):
+        for i in range(1, 20):
             try:
                 module_name = f"api_files.{i}"  # Assuming files are in a folder named `api_files`
                 module = importlib.import_module(module_name)
@@ -130,7 +130,7 @@ def run_api_files_with_loop(phone_number):
             process.join()
 
         print(f"Loop {loop + 1} completed.")
-       # time.sleep(1)  # Optional: Add a delay between loops
+        time.sleep(5)  # Optional: Add a delay between loops
 
 
 def run_with_error_handling(module, phone_number):
